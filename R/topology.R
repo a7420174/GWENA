@@ -414,7 +414,7 @@ plot_module <- function(graph_module, hubs = NULL, groups = NULL,
       named_num_vec <- TRUE
     # Vector of characters
     if (is.vector(hubs, "character")) char_vec <- TRUE
-    if (!(named_num_vec & char_vec))
+    if (!(named_num_vec | char_vec))
       stop("hubs must be a named vector of numeric values, or a vector of",
       " characters")
   }
