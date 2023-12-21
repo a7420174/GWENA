@@ -461,7 +461,7 @@ plot_module <- function(graph_module, hubs = NULL, groups = NULL,
 
   # Keeping only gene names if hubs is a named numeric vector
   if (named_num_vec) hubs <- names(hubs)
-  if (!(all(hubs %in% igraph::V(graph_module))))
+  if (!(all(hubs %in% names(igraph::V(graph_module)))))
     stop("Not all hubs are in graph_module")
 
   # Removing edges whose weight is below or above thresholds given
