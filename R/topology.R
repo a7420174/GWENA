@@ -565,7 +565,7 @@ plot_module <- function(graph_module, hubs = NULL, groups = NULL,
       }
       graph_to_plot <- igraph::set_vertex_attr(graph_to_plot, "color", 
                                                groups[,1], groups[,2])
-      vertex.color <- NULL
+      vertex.color <- graph_to_plot$palette[as.numeric(as.factor(vertex_attr(graph_to_plot, "color")))]
     }
     
     igraph::plot.igraph(graph_to_plot,
