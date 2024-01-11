@@ -611,7 +611,7 @@ plot_module <- function(graph_module, hubs = NULL, groups = NULL,
       # Legend nodes colors if groups provided
       if (!is.null(groups)) {
         graphics::legend("topleft", as.character(unique(groups[ ,2])),
-                         pt.bg = graph_to_plot$palette, title = names(groups)[2], 
+                         pt.bg = groups_palette, title = names(groups)[2], 
                          pt.cex = 2, pch = 21, col = "white",
                          bty = "n", cex = legend_cex)
       }
